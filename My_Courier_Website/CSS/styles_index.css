@@ -1,0 +1,303 @@
+body{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background-color: #ffe0b3;
+}
+
+
+nav{
+  display: flex; /*ola to ena dipla sto allo*/
+  justify-content: space-around;
+  align-items: center;
+  background-color:#DDAF94;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  height: 70px;
+  position: sticky;
+  top: 0;
+
+  z-index:1000;
+}
+
+.logo_name{
+  color:	#fcfce1;
+  font-size: 20px;
+}
+
+ul{
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  list-style: none;
+}
+
+a{
+  color:		#fcfce1;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: color 1000ms;
+  transition: color 1000ms;
+
+}
+
+a:hover{
+  color:#902020;
+
+
+}
+
+a.active-page
+{
+  background-color:#e9ccbb;
+  padding: 8px 4px;
+  color:#A52A2A;
+}
+
+
+
+
+
+
+
+#mobile_welcome{
+  display: none; /* only display it on mobile! See at bottom.*/
+}
+
+#company_logo{
+  width: 30%;
+  height: auto;
+  position: relative;
+  left: 600px;
+  margin-top: 40px;
+  margin-bottom: 100px; /* give space for next text*/
+}
+
+#main_content{
+  position: relative;
+  background-color:#e6ffff;
+  /*display: inline-block;*/
+}
+
+.column {
+position: relative;
+display: inline-block;
+
+
+width: 43%;
+margin-left: 20px;
+border-style: solid;
+border-width: 1px;
+font-size: 16px;
+text-align:left;
+padding: 16px;
+margin: 40px 15px;
+font-size: 20px;
+
+vertical-align:top  /* vazw to "konto" div centered panw kai oxi katw*/
+}
+
+/*monadiko h4 pou  xrisimopoiw einai mesa sto column*/
+h4{
+  font-size: 20px;
+  font-weight:bolder;
+}
+
+
+
+/*background image for columns. Me to opacity kanw pio transparent tin photo*/
+#column1::before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url('../photos/column1_photo.jpg');
+  background-size: cover;
+  background-position: 50% 0;
+  background-size: cover;
+
+}
+
+#column2::before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url('../photos/column2_photo.png');
+  background-size: cover;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+
+#about_video{
+
+  padding-top: 0px;
+  max-width: 100%;
+  top: 100px;
+}   /*neo na grapsw t.a*/
+
+
+#services{
+  background-color: #8080ff;
+}
+
+.services_column{
+  position: relative;
+display: inline-block;
+vertical-align:top;
+background-color: #b3fff0;
+
+
+width: 20%;
+border-style: solid;
+border-width: 1px;
+font-size: 16px;
+text-align:left;
+padding: 16px;
+margin: 15px 5px;
+font-size: 20px;
+
+  border-style: dashed;
+}
+
+
+
+
+
+
+.price_catalog{
+  width: 50%;
+  padding-left: 400px;
+  padding-top: 200px;
+}
+
+.content_header{
+  text-align: center;
+  color: rgb(180, 7, 7);
+  font-size: 40px; 
+  text-decoration: underline;
+}
+
+table,th, td{
+  background-color: #b3fff0;
+  color: black;
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 15px;
+  font-size: 19px;
+}
+
+
+th{
+  background-color: #4db8ff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+tr:nth-child(odd):hover{
+  border-style:double;
+  border-color:rgb(187, 5, 5);
+}
+tr:nth-child(even):hover{
+  border-style: double;
+  border-color:rgb(151, 5, 187);
+}
+
+
+
+
+.clr{
+  clear: both;
+}
+  
+@media screen and (max-width:992px){
+  body{
+    background-color: #902020;
+  }
+  
+  ul{
+    width: 50%;
+  }
+
+
+  #company_logo{
+    left: 350px;
+  }
+
+  #main_content{
+    clear: both; /* na kanw 1 layer grid*/
+  }
+
+  .column{
+    margin-left: 30%;
+  }
+
+  .services_column{
+    width: 43%;
+    margin-left: 1px;
+  }
+}
+
+@media screen and (max-width:768px){
+  body{
+    background-color:cornflowerblue;
+  }
+ 
+  /*kryvw to logo name gia na einai eyxirsto ston xristi to navigation bar*/
+  .logo_name{
+    display: none;
+  }
+
+  #navbar{
+    width:fit-content;
+  }
+
+  li{
+    padding-left: 15px; /*padding sta list items gia na exoun xoro*/
+  }
+
+  ul{
+    width: 100%;
+  }
+
+  #company_logo{
+    display: none;
+  }
+  
+
+  #mobile_welcome{
+    display: block; /* only display it here*/
+    text-align: center;
+
+  }
+
+
+  .services_column{
+  clear: both;
+  left: 140px;  
+  margin-bottom: 4px;
+  }
+
+  .price_catalog{
+    padding-left: 10%;
+    padding-top: 20px;
+  }
+}

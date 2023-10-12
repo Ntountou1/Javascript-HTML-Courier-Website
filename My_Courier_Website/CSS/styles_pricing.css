@@ -1,0 +1,157 @@
+body{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+ 
+  background-image: url(../photos/pricing_background.png); 
+  background-size: cover;
+  
+}
+
+
+nav{
+  display: flex; /*ola to ena dipla sto allo*/
+  justify-content: space-around;
+  align-items: center;
+  background-color:#DDAF94;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  
+}
+
+.logo_name{
+  color:	#fcfce1;
+  font-size: 20px;
+}
+
+ul{
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  list-style: none;
+}
+
+a{
+  color:		#fcfce1;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: color 1000ms;
+  transition: color 1000ms;
+
+}
+
+a:hover{
+  color:#902020;
+
+
+}
+
+a.active-page
+{
+  background-color:#e9ccbb;
+  padding: 8px 4px;
+  color:#A52A2A;
+}
+
+.header{
+  position: relative;
+  width: 53%; /*TO MAKE IT RESPONSIVE*/
+  height: 10%;
+  text-align: center;
+  background-color: #87ceeb;
+  
+  /*center div*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* keno apo to navbar*/
+nav+h1{
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+
+
+
+
+#main_content{
+  margin-top: 100px;
+  background-color: aqua;
+  position: relative;
+  width: 53%;
+  height: 250px;
+ 
+
+  /*center div*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.form_element{
+  padding-top: 15px;
+  text-align: center;
+}
+
+input{
+  width: 200px;
+  border: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+label{
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#pricing{
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+  color:darkred;
+}
+
+
+
+
+@media screen and (max-width:992px){
+
+  .logo_name{
+    display: none;
+ 
+  }
+
+  }
+
+
+  
+
+
+@media screen and (max-width:768px){
+
+  #navbar{
+    width:fit-content;
+  }
+
+  li{
+    padding-left: 15px; /*padding sta list items gia na exoun xoro*/
+  }
+  
+}

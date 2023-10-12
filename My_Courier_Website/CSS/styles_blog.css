@@ -1,0 +1,126 @@
+body{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background-color: #ffccb3;
+  
+}
+
+
+nav{
+  display: flex; /*ola to ena dipla sto allo*/
+  justify-content: space-around;
+  align-items: center;
+  background-color:#DDAF94;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index:1000; /*to stay on top*/
+}
+
+.logo_name{
+  color:	#fcfce1;
+  font-size: 20px;
+}
+
+ul{
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  list-style: none;
+}
+
+a{
+  color:		#fcfce1;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: color 1000ms;
+  transition: color 1000ms;
+
+}
+
+a:hover{
+  color:#902020;
+
+
+}
+
+a.active-page
+{
+  background-color:#e9ccbb;
+  padding: 8px 4px;
+  color:#A52A2A;
+}
+
+
+
+.blog{
+  background-color: #f2f2f2;
+position: relative;
+display: inline-block;
+width: 22%;
+vertical-align:top;
+padding: 0px 10px;
+margin-top: 100px;
+margin-left: 1px;
+border-style: solid;
+border-width: 1px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.blog_image{
+  max-width: 100%;
+}
+
+.article_header{
+  color: #A52A2A;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+@media screen and (max-width:992px){
+  
+  .logo_name{
+    display: none;
+  }
+
+  .blog{
+    width: 45%;
+    margin-top: 10px;
+  }
+
+}
+
+
+
+@media screen and (max-width:768px){
+
+  #navbar{
+    width:fit-content;
+  }
+
+  li{
+    padding-left: 15px; /*padding sta list items gia na exoun xoro*/
+  }
+
+
+
+  /*make elements not float*/
+  .blog{
+    width: 60%;
+    margin-left: 80px;
+
+  }
+}

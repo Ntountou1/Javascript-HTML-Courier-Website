@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="../CSS/styles_pricing.css">
+
+
+    <script>
+        function calculatePrice(){
+            var total=0;
+            var isValid = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+            var postcodeID=parseInt(document.getElementById('postcode').value);
+            var weightID=parseInt(document.getElementById('product_weight').value);
+
+            if (isValid.test(postcodeID)){
+
+                if (postcodeID<=20000){
+                    if(weightID<=5){
+                        total=weightID*0.5;
+                    }    
+                    else{
+                    total=5*0.5 + (weightID-5)*0.3;  
+                    }    
+                total=total+0.5    
+                }
+                
+                else if(postcodeID<=30000){
+                    if (weightID<=5){
+                        total=weightID*0.5;
+                    }
+                    else{
+                        total=5*0.5 + (weightID-5)*0.2; 
+                    }
+                total=total+1;    
+                }
+
+                else if(postcodeID<=40000){
+                    if (weightID<=5){
+                        total=weightID*1;
+                    }
+                    else{
+                        total=5*1 + (weightID-5)*0.25; 
+                    }
+                total=total+1.5;    
+                }
+
+                else if(postcodeID<=50000){
+                    if (weightID<=5){
+                        total=weightID*1.5;
+                    }
+                    else{
+                        total=5*1.5 + (weightID-5)*0.2; 
+                    }
+                total=total+2;    
+                }
+
+                else{
+                    if (weightID<=5){
+                        total=weightID*2;
+                    }
+                    else{
+                        total=5*2 + (weightID-5)*0.15; 
+                    }
+                total=total+2.5;    
+                }
+
+                document.getElementById('total_pricing').value = total + "$";
+            return false;    
+            }   
+
+            else{
+               alert( "Λάθος Τ.Κ.!" );
+                postcodeID.focus();
+                return false
+            }
+            
+}
+    </script>
+
+</head>
+
+
+<body>
+    <nav>
+
+        <div class="logo_name">
+          <h3>Our company</h3>
+        </div>
+        <ul  id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pricing.html" class='active-page'>Pricing</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Registration</a></li>
+        </ul>
+
+      </nav>
+
+      <h1><div class="header">Υπολογισμός κόστους δέματος</div></h1>
+    
+     <div id="main_content">
+        <form>
+            <div class="form_element">
+                <label for="postcode">Τ.Κ.</label><br>
+                <input type="text" name="postcode" id="postcode" placeholder="Τ.Κ." title="5 ψηφία παρακαλώ(0-9)" ><br>
+            </div>
+            
+            <div class="form_element">
+                <label for="product_weight">Βάρος δέματος</label><br>
+                <input type="text" name="product_weight" id="product_weight"  placeholder="Εισάγετε το βάρος του δέματος"><br>
+            </div>
+
+            <div class="form_element">
+                <button type="submit" onclick="return calculatePrice()">Υπολογισμός</button>
+            </div>    
+            
+            <div id="pricing">
+                <label for="total_pricing">Συνολικό κόστος:</label>
+                <input type="text"  id="total_pricing">
+            </div>    
+        </form>    
+    </div> 
+
+</body>
+</html>
